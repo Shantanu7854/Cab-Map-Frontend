@@ -1,6 +1,8 @@
+// layout.tsx (Server Component)
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
+import AnimatedBackground from "../components/AnimatedBackground";
 
 export const metadata = {
   title: "CabMap",
@@ -14,11 +16,18 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 min-h-screen">
-        <Navbar />
-        <main className="pt-6">{children}</main>
-        <Toaster position="top-right" />
+      <body className="min-h-screen relative overflow-x-hidden">
+        <AnimatedBackground />
+        
+        {/* Content overlay */}
+        <div className="relative z-10">
+          <Navbar />
+          <main className="pt-6">{children}</main>
+          <Toaster position="top-right" />
+        </div>
       </body>
     </html>
   );
 }
+
+// components/AnimatedBackground.tsx (Client Component)
