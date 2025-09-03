@@ -1,4 +1,3 @@
-// layout.tsx (Server Component)
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
@@ -32,4 +31,4 @@ export default function RootLayout({
   );
 }
 
-// components/AnimatedBackground.tsx (Client Component)
+
