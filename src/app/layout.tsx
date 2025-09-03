@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import AnimatedBackground from "../components/AnimatedBackground";
+import FooterSection from "../components/sections/footer/default";
 
 export const metadata = {
   title: "CabMap",
@@ -23,6 +24,7 @@ export default function RootLayout({
         <div className="relative z-10">
           <Navbar />
           <main className="pt-6">{children}</main>
+          <FooterSection />
           <Toaster position="top-right" />
         </div>
       </body>
